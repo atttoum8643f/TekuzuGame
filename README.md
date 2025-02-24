@@ -1,4 +1,4 @@
-# 🎲 TakuzuGame
+# 🎲 ZeroOneR - Jeu Takuzu en R
 
 Bienvenue dans **TakuzuGame**, une bibliothèque R accompagnée d'une application **Shiny interactive** dédiée au jeu **Takuzu (Binairo)** ! 🔢✨  
 
@@ -30,7 +30,33 @@ Le **Takuzu** est facile à apprendre mais devient **de plus en plus complexe** 
 
 ### 🔧 Installation
 
+Vous pouvez cloner le dépôt complet avec la commande ci-dessous :
 ```{r}
 # Cloner le dépôt
 system("git clone https://github.com/atttoum8643f/TekuzuGame.git")
 ```
+
+Si vous préférez installer uniquement l'application du jeu Takuzu (ZeroOneR), utilisez la commande suivante :
+```{r}
+# Installer l'application ZeroOneR depuis GitHub
+devtools::install_github("atttoum8643f/ZeroOneR")
+
+```
+### Charger la bibliothèque R :
+
+```{r}
+library(ZeroOneR)
+```
+### Lancer l’application Shiny :
+
+```{r}
+shiny::runApp("app.R")
+```
+
+## 📌 Technologies utilisées
+   - R (Langage principal)
+   - Shiny (Framework pour applications web interactives en R)
+   - GitHub (Versioning & Collaboration)
+
+## 📄 Licence
+Ce projet est sous licence MIT – Voir le fichier LICENSE pour plus de détails.
