@@ -22,11 +22,15 @@
 server(input, output, session)
 }
 \arguments{
-\item{input, output, session}{Paramètres standards de Shiny. Ces objets sont utilisés pour réagir aux événements de l'utilisateur et mettre à jour l'interface.}
+\item{input, }{output, session Parametres standards de Shiny. Ces objets sont utilises pour reagir aux evenements de l'utilisateur et mettre a jour l'interface.}
+
+\item{output}{L'objet output pour l'affichage dans l'UI.}
+
+\item{session}{L'objet session pour la gestion de l'etat de l'application.}
 }
 \value{
 Une application Shiny fonctionnelle.
 }
 \description{
-Cette fonction gère le serveur de l'application Takuzu, y compris la logique de génération et d'affichage de la grille, l'interaction avec l'utilisateur, la vérification de la grille, la gestion des indices et l'affichage du résultat.
+Cette fonction gere le serveur de l'application Takuzu, y compris la logique de generation et d'affichage de la grille, l'interaction avec l'utilisateur, la verification de la grille, la gestion des indices et l'affichage du resultat.
 }

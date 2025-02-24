@@ -4,12 +4,12 @@
 \alias{ui}
 \title{UI de l'application Takuzu}
 \value{
-Un objet \code{shiny::fluidPage} représentant l'interface utilisateur du jeu Takuzu.
+Un objet \code{shiny::fluidPage} representant l'interface utilisateur du jeu Takuzu.
 }
 \description{
-Cette interface utilisateur (UI) est utilisée pour afficher et interagir avec le jeu Takuzu, une variante du Binairo.
+Cette interface utilisateur (UI) est utilisee pour afficher et interagir avec le jeu Takuzu, une variante du Binairo.
 L'application est construite avec Shiny et permet aux utilisateurs de jouer au jeu Takuzu sur une grille de taille variable.
-Les utilisateurs peuvent choisir la difficulté du jeu et jouer avec une grille générée aléatoirement.
+Les utilisateurs peuvent choisir la difficulte du jeu et jouer avec une grille generee aleatoirement.
 }
 \examples{
 # Lancer l'UI du jeu

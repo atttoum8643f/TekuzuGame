@@ -2,34 +2,34 @@
 % Please edit documentation in R/creer_matrice_takuzu.R
 \name{creer_matrice_takuzu}
 \alias{creer_matrice_takuzu}
-\title{Crée une matrice de jeu Takuzu avec des cases vides selon la difficulté}
+\title{Cree une matrice de jeu Takuzu avec des cases vides selon la difficulte}
 \usage{
 creer_matrice_takuzu(matrice_base, difficulte = "facile")
 }
 \arguments{
-\item{matrice_base}{Une matrice carrée générée par \code{generate_valid_matrix}, représentant la base valide du jeu.}
+\item{matrice_base}{Une matrice carree generee par \code{generate_valid_matrix}, representant la base valide du jeu.}
 
-\item{difficulte}{Une chaîne de caractères spécifiant le niveau de difficulté. Les options sont :
+\item{difficulte}{Une chaine de caracteres specifiant le niveau de difficulte. Les options sont :
 \itemize{
 \item "facile" : ajoute environ 10\% de cases manquantes.
 \item "avancee" : ajoute environ 25\% de cases manquantes.
 \item "difficile" : ajoute environ 35\% de cases manquantes.
 }
-Par défaut, la difficulté est "facile".}
+Par defaut, la difficulte est "facile".}
 }
 \value{
-Une matrice de même taille que \code{matrice_base}, avec des cases vides (\code{NA}) réparties selon la difficulté choisie.
+Une matrice de meme taille que \code{matrice_base}, avec des cases vides (\code{NA}) reparties selon la difficulte choisie.
 }
 \description{
-Cette fonction génère une matrice de jeu Takuzu en fonction de la difficulté choisie. Elle utilise une matrice de base valide (par exemple, générée par \code{generate_valid_matrix})
-et remplace certaines cases par des \code{NA} pour rendre le jeu plus difficile selon le niveau spécifié. Le taux de cases manquantes varie selon la difficulté.
+Cette fonction genere une matrice de jeu Takuzu en fonction de la difficulte choisie. Elle utilise une matrice de base valide (par exemple, generee par \code{generate_valid_matrix})
+et remplace certaines cases par des \code{NA} pour rendre le jeu plus difficile selon le niveau specifie. Le taux de cases manquantes varie selon la difficulte.
 }
 \examples{
-# Créer une matrice de Takuzu facile
+# Creer une matrice de Takuzu facile
 base_matrice <- generate_valid_matrix(6)
 matrice_facile <- creer_matrice_takuzu(base_matrice, difficulte = "facile")
 
-# Créer une matrice de Takuzu difficile
+# Creer une matrice de Takuzu difficile
 matrice_difficile <- creer_matrice_takuzu(base_matrice, difficulte = "difficile")
 
 }

@@ -1,8 +1,8 @@
 #' UI de l'application Takuzu
 #'
-#' Cette interface utilisateur (UI) est utilisée pour afficher et interagir avec le jeu Takuzu, une variante du Binairo.
+#' Cette interface utilisateur (UI) est utilisee pour afficher et interagir avec le jeu Takuzu, une variante du Binairo.
 #' L'application est construite avec Shiny et permet aux utilisateurs de jouer au jeu Takuzu sur une grille de taille variable.
-#' Les utilisateurs peuvent choisir la difficulté du jeu et jouer avec une grille générée aléatoirement.
+#' Les utilisateurs peuvent choisir la difficulte du jeu et jouer avec une grille generee aleatoirement.
 #'
 #' @name ui
 #' @import shiny
@@ -10,7 +10,7 @@
 #' @import gtools
 #' @import Rcpp
 #'
-#' @return Un objet `shiny::fluidPage` représentant l'interface utilisateur du jeu Takuzu.
+#' @return Un objet `shiny::fluidPage` representant l'interface utilisateur du jeu Takuzu.
 #'
 #' @examples
 #' # Lancer l'UI du jeu
@@ -27,7 +27,7 @@ ui <- fluidPage(
   theme = shinytheme("superhero"),
   tags$head(
     tags$style(HTML("
-      /* Conteneur principal centré pour grille + boutons */
+      /* Conteneur principal centre pour grille + boutons */
       .grid-and-buttons {
         display: flex;
         flex-direction: column;
@@ -65,14 +65,14 @@ ui <- fluidPage(
         padding: 30px;
         display: inline-block;
         border-radius: 30px;
-        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);  /* Ombre plus marquée */
-        transform: translateY(5px);  /* Simule l'élévation de la capsule */
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);  /* Ombre plus marquee */
+        transform: translateY(5px);  /* Simule l'elevation de la capsule */
         transition: all 0.3s ease;
       }
 
       .outer-capsule-container:hover {
-        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);  /* Ombre plus marquée au survol */
-        transform: translateY(10px);  /* Effet d'élévation encore plus accentué */
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);  /* Ombre plus marquee au survol */
+        transform: translateY(10px);  /* Effet d'elevation encore plus accentue */
       }
 
       /* Conteneur de la grille */
@@ -142,7 +142,7 @@ ui <- fluidPage(
         100% { color: white; }
       }
 
-      /* Message de Réfléchissez encore 30 secondes */
+      /* Message de Reflechissez encore 30 secondes */
       .think-message {
         color: red;
         font-size: 24px;
@@ -151,7 +151,7 @@ ui <- fluidPage(
         margin-bottom: 20px;
       }
 
-      /* Style des émojis dans la capsule à fond blanc */
+      /* Style des emojis dans la capsule a fond blanc */
       .emoji-container {
         font-size: 30px;
         text-align: center;
@@ -167,9 +167,9 @@ ui <- fluidPage(
                  sliderInput("gridSize", "Taille de la grille :",
                              min = 8, max = 12, value = 8, step = 2,
                              animate = TRUE),
-                 selectInput("difficulty", "Choisir la difficulté :",
+                 selectInput("difficulty", "Choisir la difficulte :",
                              choices = c("Facile" = "facile",
-                                         "Avancée" = "avancee",
+                                         "Avancee" = "avancee",
                                          "Difficile" = "difficile"),
                              selected = "facile"),
                  verbatimTextOutput("status")
@@ -179,8 +179,8 @@ ui <- fluidPage(
                      div(class = "grid-and-buttons",
                          div(class = "think-message", textOutput("thinkMessage")),
 
-                         # Capsule à fond blanc contenant les emojis
-                         div(class = "emoji-container", "😊 😀 😁"),  # Émojis jaunes
+                         # Capsule a fond blanc contenant les emojis
+                         div(class = "emoji-container", "\U1F60A \U1F600 \U1F917 \U1F601"),  # emojis jaunes
 
                          div(class = "red-capsule",
                              div(class = "grid-container", uiOutput("gridUI"))
@@ -188,21 +188,21 @@ ui <- fluidPage(
 
                          div(class = "button-container",
                              actionButton("reset", "Nouvelle Grille", class = "new-grid-btn"),
-                             actionButton("check", "Vérifier la Grille", class = "check-grid-btn"),
+                             actionButton("check", "Verifier la Grille", class = "check-grid-btn"),
                              actionButton("hint", "Obtenir un Indice", class = "hint-btn"),
-                             actionButton("result", "Résultat", class = "new-grid-btn")
+                             actionButton("result", "Resultat", class = "new-grid-btn")
                          )
                      )
                  )
                )
              )
     ),
-    tabPanel("Règles du Jeu",
-             h3("Règles du Jeu Takuzu"),
-             p("Le but du jeu Takuzu est de remplir la grille avec des 0 et des 1 de manière à respecter les règles suivantes :"),
+    tabPanel("Regles du Jeu",
+             h3("Regles du Jeu Takuzu"),
+             p("Le but du jeu Takuzu est de remplir la grille avec des 0 et des 1 de maniere a respecter les regles suivantes :"),
              tags$ul(
-               tags$li("Chaque ligne et chaque colonne doit contenir un nombre égal de 0 et de 1."),
-               tags$li("Aucune ligne ni colonne ne peut contenir plus de deux 0 ou plus de deux 1 consécutifs."),
+               tags$li("Chaque ligne et chaque colonne doit contenir un nombre egal de 0 et de 1."),
+               tags$li("Aucune ligne ni colonne ne peut contenir plus de deux 0 ou plus de deux 1 consecutifs."),
                tags$li("La grille ne doit pas contenir deux lignes ou deux colonnes identiques.")
              )
     )
