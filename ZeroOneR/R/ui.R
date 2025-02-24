@@ -1,16 +1,17 @@
 #' UI de l'application Takuzu
 #'
-#' Cette interface utilisateur (UI) est utilisée pour afficher et interagir avec le jeu Takuzu, une variante du Binairo. 
-#' L'application est construite avec Shiny et permet aux utilisateurs de jouer au jeu Takuzu sur une grille de taille variable. 
+#' Cette interface utilisateur (UI) est utilisée pour afficher et interagir avec le jeu Takuzu, une variante du Binairo.
+#' L'application est construite avec Shiny et permet aux utilisateurs de jouer au jeu Takuzu sur une grille de taille variable.
 #' Les utilisateurs peuvent choisir la difficulté du jeu et jouer avec une grille générée aléatoirement.
 #'
+#' @name ui
 #' @import shiny
 #' @import shinythemes
 #' @import gtools
 #' @import Rcpp
 #'
 #' @return Un objet `shiny::fluidPage` représentant l'interface utilisateur du jeu Takuzu.
-#' 
+#'
 #' @examples
 #' # Lancer l'UI du jeu
 #' ui
@@ -91,24 +92,24 @@ ui <- fluidPage(
       }
 
       /* Style des boutons Takuzu */
-      .takuzu-btn { 
+      .takuzu-btn {
         background-color: #37474F;
-        border-radius: 50%; 
-        border: 1px solid white; 
-        width: 50px; 
-        height: 50px; 
-        color: white; 
-        font-size: 20px; 
-        text-align: center; 
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+        border-radius: 50%;
+        border: 1px solid white;
+        width: 50px;
+        height: 50px;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         transition: all 0.2s ease-in-out;
       }
       .takuzu-btn-1 { background-color: #FFA500; }  /* Orange pour 1 */
       .takuzu-btn-0 { background-color: #4CAF50; }  /* Vert pour 0 */
-      .takuzu-btn:hover { 
+      .takuzu-btn:hover {
         background-color: #FFA000;
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-        transform: translateY(-3px); 
+        transform: translateY(-3px);
       }
 
       /* Boutons d'action */
@@ -163,33 +164,33 @@ ui <- fluidPage(
     tabPanel("Jeu",
              sidebarLayout(
                sidebarPanel(
-                 sliderInput("gridSize", "Taille de la grille :", 
+                 sliderInput("gridSize", "Taille de la grille :",
                              min = 8, max = 12, value = 8, step = 2,
                              animate = TRUE),
-                 selectInput("difficulty", "Choisir la difficulté :", 
-                             choices = c("Facile" = "facile", 
-                                         "Avancée" = "avancee", 
-                                         "Difficile" = "difficile"), 
+                 selectInput("difficulty", "Choisir la difficulté :",
+                             choices = c("Facile" = "facile",
+                                         "Avancée" = "avancee",
+                                         "Difficile" = "difficile"),
                              selected = "facile"),
                  verbatimTextOutput("status")
                ),
                mainPanel(
                  div(class = "outer-capsule-container",  # Capsule externe autour de grille et boutons
                      div(class = "grid-and-buttons",
-                         div(class = "think-message", textOutput("thinkMessage")),  
-                         
+                         div(class = "think-message", textOutput("thinkMessage")),
+
                          # Capsule à fond blanc contenant les emojis
                          div(class = "emoji-container", "😊 😀 😁"),  # Émojis jaunes
-                         
-                         div(class = "red-capsule",  
+
+                         div(class = "red-capsule",
                              div(class = "grid-container", uiOutput("gridUI"))
                          ),
-                         
+
                          div(class = "button-container",
                              actionButton("reset", "Nouvelle Grille", class = "new-grid-btn"),
                              actionButton("check", "Vérifier la Grille", class = "check-grid-btn"),
                              actionButton("hint", "Obtenir un Indice", class = "hint-btn"),
-                             actionButton("result", "Résultat", class = "new-grid-btn")  
+                             actionButton("result", "Résultat", class = "new-grid-btn")
                          )
                      )
                  )
