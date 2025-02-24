@@ -14,11 +14,13 @@
 #'
 #' @return Une matrice de même taille que \code{matrice_base}, avec des cases vides (\code{NA}) réparties selon la difficulté choisie.
 #'
+#' @importFrom stats runif
+#'
 #' @examples
 #' # Créer une matrice de Takuzu facile
 #' base_matrice <- generate_valid_matrix(6)
 #' matrice_facile <- creer_matrice_takuzu(base_matrice, difficulte = "facile")
-#' 
+#'
 #' # Créer une matrice de Takuzu difficile
 #' matrice_difficile <- creer_matrice_takuzu(base_matrice, difficulte = "difficile")
 #'
@@ -27,14 +29,14 @@ creer_matrice_takuzu <- function(matrice_base, difficulte = "facile") {
   grid <- matrice_base
   nrow_grid <- nrow(grid)
   ncol_grid <- ncol(grid)
-  
+
   # Définition du taux de cases manquantes selon la difficulté
   prob_na <- switch(difficulte,
                     "facile" = 0.10,
                     "avancee" = 0.25,
                     "difficile" = 0.35,
                     stop("Difficulté non reconnue"))
-  
+
   # Remplir la matrice avec des NA selon la probabilité
   for (i in 1:nrow_grid) {
     for (j in 1:ncol_grid) {
@@ -43,6 +45,6 @@ creer_matrice_takuzu <- function(matrice_base, difficulte = "facile") {
       }
     }
   }
-  
+
   return(grid)
 }

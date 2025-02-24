@@ -4,13 +4,13 @@ if (!require(shiny)) {
 }
 
 # Importer les fonctions nécessaires avec la directive @source
-#' @source "generate_valid_row.R"
-#' @source "rotate_vector.R"
-#' @source "generate_valid_matrix.R"
-#' @source "creer_matrice_takuzu.R"
-#' @source "verifier_grille.R"
-#' @source "ajuster_indices_takuzu.R"
-#' @source "ui.R"
+source("R/generate_valid_row.R")
+source("R/rotate_vector.R")
+source("R/generate_valid_matrix.R")
+source("R/creer_matrice_takuzu.R")
+source("R/verifier_grille.R")
+source("R/ajuster_indices_takuzu.R")
+source("R/ui.R")
 
 # Lancer l'application Shiny
-shiny::runApp("app.R")
+shiny::shinyApp(ui, server)
