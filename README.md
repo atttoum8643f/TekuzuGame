@@ -1,10 +1,3 @@
----
-title: "TakuzuGame"
-author: "atttoum8643f"
-date: "`r Sys.Date()`"
-output: github_document
----
-
 # 🎲 TakuzuGame
 
 Bienvenue dans **TakuzuGame**, une bibliothèque R accompagnée d'une application **Shiny interactive** dédiée au jeu **Takuzu (Binairo)** ! 🔢✨  
@@ -37,7 +30,7 @@ Le **Takuzu** est facile à apprendre mais devient **de plus en plus complexe** 
 
 ### 🔧 Installation
 
-```r
+```{r}
 # Cloner le dépôt
 system("git clone https://github.com/atttoum8643f/TekuzuGame.git")
-setwd("TekuzuGame")
+```
