@@ -94,10 +94,10 @@ server <- function(input, output, session) {
 
   # Nouvelle grille
   observeEvent(input$reset, {
-    if (!resultat_affiche()) {
-      base_grid <- matrice_base()
-      takuzu_grid(creer_matrice_takuzu(base_grid, difficulte = input$difficulty))
-    }
+    resultat_affiche(FALSE)  # Permet de réinitialiser après avoir vu le résultat
+    new_base_grid <- generate_valid_matrix(input$gridSize)
+    matrice_base(new_base_grid)
+    takuzu_grid(creer_matrice_takuzu(new_base_grid, difficulte = input$difficulty))
   })
 
   # Indices

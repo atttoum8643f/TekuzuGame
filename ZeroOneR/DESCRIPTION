@@ -1,6 +1,6 @@
 Package: ZeroOneR
 Title: Jeu Takuzu - Package R
-Version: 1.0.0
+Version: 1.0.1
 Author@R: 
     person("Ibrahim", "Attoumani", email = "ibrahim.attoumani6@gmail.com", role = c("aut", "cre"))
 Author: Ibrahim Attoumani [aut, cre]
