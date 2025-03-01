@@ -204,7 +204,13 @@ ui <- fluidPage(
                tags$li("Chaque ligne et chaque colonne doit contenir un nombre egal de 0 et de 1."),
                tags$li("Aucune ligne ni colonne ne peut contenir plus de deux 0 ou plus de deux 1 consecutifs."),
                tags$li("La grille ne doit pas contenir deux lignes ou deux colonnes identiques.")
-             )
+             ),
+             br(),  # Ajoute un espace avant le lien
+             tags$p("Pour plus d'informations, consultez ",
+                    tags$a(href = "https://fr.wikipedia.org/wiki/Takuzu",
+                           "la page Wikipedia du Takuzu",
+                           target = "_blank"))  # Ouvre le lien dans un nouvel onglet
     )
+
   )
 )
