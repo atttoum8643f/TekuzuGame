@@ -61,3 +61,6 @@ shiny::runApp("app.R")
 
 ## 📄 Licence
 Ce projet est sous licence MIT – Voir le fichier LICENSE pour plus de détails.
+
+## Lien vers l'application
+Vous pouvez retrouver l'application [ici](https://ibrah8643f.shinyapps.io/zerooner/).
