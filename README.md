@@ -39,7 +39,7 @@ system("git clone https://github.com/atttoum8643f/TekuzuGame.git")
 Si vous préférez installer uniquement l'application du jeu Takuzu (ZeroOneR), utilisez la commande suivante :
 ```{r}
 # Installer l'application ZeroOneR depuis GitHub
-devtools::install_github("atttoum8643f/ZeroOneR")
+devtools::install_github(https://github.com/atttoum8643f/TekuzuGame.git")
 
 ```
 ### Charger la bibliothèque R :
