@@ -11,7 +11,8 @@ Ce projet vise à :
 
 ## 🎯 Présentation du jeu Takuzu (Binairo)
 
-Le **Takuzu** est un jeu de **logique combinatoire**, similaire au **Sudoku**, qui se joue sur une **grille carrée** (généralement **6×6** ou **8×8**).  
+Le **Takuzu** est un jeu de **logique combinatoire**, similaire au **Sudoku**, qui se joue sur une **grille carrée** (généralement **6×6** ou **8×8**).  Pour plus d'informations, veuillez [cliquer ici](https://fr.wikipedia.org/wiki/Takuzu).
+
 
 ### 📝 Règles du jeu
 - Chaque case doit contenir un **0** ou un **1**.
