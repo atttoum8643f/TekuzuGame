@@ -165,7 +165,7 @@ ui <- fluidPage(
              sidebarLayout(
                sidebarPanel(
                  sliderInput("gridSize", "Taille de la grille :",
-                             min = 8, max = 12, value = 8, step = 2,
+                             min = 8, max = 10, value = 8, step = 2,
                              animate = TRUE),
                  selectInput("difficulty", "Choisir la difficulte :",
                              choices = c("Facile" = "facile",
