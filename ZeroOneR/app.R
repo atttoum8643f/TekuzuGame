@@ -10,6 +10,7 @@ source("R/generate_valid_matrix.R")
 source("R/creer_matrice_takuzu.R")
 source("R/verifier_grille.R")
 source("R/ajuster_indices_takuzu.R")
+source("R/server.R")
 source("R/ui.R")
 
 # Lancer l'application Shiny

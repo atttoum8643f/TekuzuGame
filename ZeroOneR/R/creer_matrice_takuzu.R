@@ -6,9 +6,10 @@
 #' @param matrice_base Une matrice carree generee par \code{generate_valid_matrix}, representant la base valide du jeu.
 #' @param difficulte Une chaine de caracteres specifiant le niveau de difficulte. Les options sont :
 #'   \itemize{
-#'     \item "facile" : ajoute environ 10% de cases manquantes.
-#'     \item "avancee" : ajoute environ 25% de cases manquantes.
-#'     \item "difficile" : ajoute environ 35% de cases manquantes.
+#'     \item "facile" : ajoute environ 20% de cases manquantes.
+#'     \item "avancee" : ajoute environ 45% de cases manquantes.
+#'     \item "difficile" : ajoute environ 60% de cases manquantes.
+#'     \item "difficile" : ajoute environ 80% de cases manquantes.
 #'   }
 #'   Par defaut, la difficulte est "facile".
 #'
@@ -32,9 +33,10 @@ creer_matrice_takuzu <- function(matrice_base, difficulte = "facile") {
 
   # Definition du taux de cases manquantes selon la difficulte
   prob_na <- switch(difficulte,
-                    "facile" = 0.10,
-                    "avancee" = 0.25,
-                    "difficile" = 0.35,
+                    "facile" = 0.20,
+                    "avancee" = 0.45,
+                    "difficile" = 0.60,
+                    "experimentee" = 0.80,
                     stop("Difficulte non reconnue"))
 
   # Remplir la matrice avec des NA selon la probabilite

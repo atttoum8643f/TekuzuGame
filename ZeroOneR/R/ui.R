@@ -170,7 +170,8 @@ ui <- fluidPage(
                  selectInput("difficulty", "Choisir la difficulte :",
                              choices = c("Facile" = "facile",
                                          "Avancee" = "avancee",
-                                         "Difficile" = "difficile"),
+                                         "Difficile" = "difficile",
+                                         "Experimentee" = "experimentee"),
                              selected = "facile"),
                  verbatimTextOutput("status")
                ),

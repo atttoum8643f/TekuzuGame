@@ -11,9 +11,10 @@ creer_matrice_takuzu(matrice_base, difficulte = "facile")
 
 \item{difficulte}{Une chaine de caracteres specifiant le niveau de difficulte. Les options sont :
 \itemize{
-\item "facile" : ajoute environ 10\% de cases manquantes.
-\item "avancee" : ajoute environ 25\% de cases manquantes.
-\item "difficile" : ajoute environ 35\% de cases manquantes.
+\item "facile" : ajoute environ 20\% de cases manquantes.
+\item "avancee" : ajoute environ 45\% de cases manquantes.
+\item "difficile" : ajoute environ 60\% de cases manquantes.
+\item "difficile" : ajoute environ 80\% de cases manquantes.
 }
 Par defaut, la difficulte est "facile".}
 }
